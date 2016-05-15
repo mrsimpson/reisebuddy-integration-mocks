@@ -1,17 +1,19 @@
 {
-  "name": "reisebuddy",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "name": "reisebuddy-api",
+  "version": "0.1.0",
+  "description": "The Reisebuddy 'Magic' API provides all operations that are needed by the Bot Clients",
+  "main": "index.js",
+  "keywords": [
+    "swagger"
+  ],
+  "license": "MIT",
+  "private": true,
   "dependencies": {
-    "simple-restful": "^1.3.0",
-    "swagger-server": "^1.0.0-alpha.18"
+    "connect": "^3.2.0",
+    "js-yaml": "^3.3.0",
+    "swagger-tools": "0.9.*"
   },
-  "devDependencies": {},
   "scripts": {
-    "crm": "node %NODE_DEBUG_OPTION% ./CRM/crmMockServer.js",
-    "redlink": "node %NODE_DEBUG_OPTION% ./KnowledgeCore/redlinkMockServer.js"
-  },
-  "author": "Oliver Jägle",
-  "license": "ISC"
+    "start": "node ./index.js"
+  }
 }
