@@ -1,6 +1,6 @@
 'use strict';
 
-exports.buildQueryUsingPOST = function (args, res, next) {
+exports.buildStoreUsingPOST = function (args, res, next) {
     /**
      * parameters expected in the args:
      * conversation (Conversation)
@@ -11,23 +11,22 @@ exports.buildQueryUsingPOST = function (args, res, next) {
     dummy['application/json'] = {
         "meta": {
             "lastMessageAnalyzed": 123,
-            "status": "Complete"
+            "status": "aeiou"
         },
         "messages": args.conversation.originalValue.messages,
         "tokens": [{
             "confidence": 0.42,
             "start": 123,
             "end": 123,
-            "state": "Suggested",
-            "type": "QueryType",
+            "state": "aeiou",
+            "type": "aeiou",
             "value": "{}",
             "messageIdx": 123
         }],
         "id": "aeiou",
         "queries": [
             {
-                "serviceName": "Received " + args.conversation.originalValue.messages.length + " messages",
-                "url": "/dev/null"
+            "serviceName": "Received" + args.conversation.originalValue.messages.length + "messages"
             },
             {
                 "serviceName": "Answer to life, universe and everyting",
